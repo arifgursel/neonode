@@ -1,0 +1,34 @@
+<div class="row" ng-app="myapp" ng-controller="categoriesController">
+  <div>
+    <h2>Add Category</h2>
+    <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+    <form name ="newCategory" novalidate>
+      <fieldset>
+        <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+        <div class="form-group">
+            <label for="name">Category Name <span class="badge">All fields required</span></label>
+            <input type="text" class="form-control" id="name" placeholder="Category Name" ng-model="formData.name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Category Description</label>
+            <input type="text" class="form-control" id="description" placeholder="Description of category" ng-model="formData.description" required>
+        </div>
+        <div class="form-group">
+            <label for="imageLocation">Image Location</label>
+            <input type="text" class="form-control" id="imageLocation" placeholder="categoryimg.png" ng-model="formData.imageLocation" required>
+        </div>
+        <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+        <button type="submit" class="btn btn-danger btn-block" ng-click="addBusinessCategory()">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <div>
+    <h2>Commonwealth Business Categories</h2>
+    <div ng-repeat="category in categories">
+      <p>
+        <strong>{{category.name}}</strong> {{category.description}}<br>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End of user details div/partial -->

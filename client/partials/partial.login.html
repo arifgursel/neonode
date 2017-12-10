@@ -1,0 +1,22 @@
+<div id="login" class="container">
+	<div class="row">
+	  <div class="small-6 small-centered columns">
+	  	<p>Social Media Sign In</p>
+	    <a href="/api/auth/facebook" class="facebook radius button split" > sign in with facebook <span></span></a>
+	    <a href="/api/auth/twitter" class="twitter radius button split" > sign in with twitter <span></span></a>
+	    <a href="/api/auth/google" class="google radius button split" > sign in with google+ <span></span></a>
+	</div>
+	<div class="row">
+	  <div class="small-6 small-centered columns">
+			<div class="alert callout" ng-if="error.length > 0" data-closable>
+				<p>{{ error }}</p>
+			</div>
+			<hr>
+			<p>Or Enter Info Below</p>
+			<label>Email:</label><input class="form-control" name="email" type="text" ng-model="user.email" />
+			<label>Password:</label><input class="form-control" name="password" type="password" ng-model="user.password" />
+			<button class="hollow button" type="submit" ng-click="login()">Login</button>
+		</div>
+	</div>
+</div><!-- End of Login -->
+<!-- End of User Login/Register Partial -->

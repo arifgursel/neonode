@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="small-12 medium-6 large-4">
+		<a href="#/home" class="button">Home</a>
+		<a href="#/updatePassword" class="button">Update Password</a>
+		<a href="#/updateEmail" class="button">Update Email</a>
+		<h3>User Profile</h3>
+		<h5 ng-if="user.type == 0"><strong>Regular User</strong></h5>
+		<h5 ng-if="user.type == 1"><strong>Admin User</strong></h5>
+		<h5 ng-if="user.type == 2"><strong>Super Admin User</strong></h5>
+		<hr>
+		<p><strong>First Name:</strong> {{user.firstName}}</p>
+		<p><strong>Last Name:</strong> {{user.lastName}}</p>
+		<p><strong>Email:</strong> {{user.email}}</p>
+		<p><strong>Signed Up:</strong> {{user.createdAt | date:'MM/dd/yyyy'}}</p>
+		<p><strong>Updated On:</strong> {{user.updatedAt | date:'MM/dd/yyyy'}}</p>
+		<a href="#/updateProfile" class="button">Update Profile</a>
+	</div>
+</div><!-- End of user details div/partial -->

@@ -1,0 +1,18 @@
+<div class="row" ng-app="myapp" ng-controller="reviewController">
+  <div>
+    <h2>New Review</h2>
+      <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+      <form name ="newReview" novalidate>
+        <fieldset>
+          <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+          <div class="form-group">
+              <label for="review">Review</label>
+              <input type="text" class="form-control" id="review" placeholder="How was your experience at this business?" ng-model="formData.review" required>
+          </div>
+          <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+          <button type="submit" class="btn btn-danger btn-block" ng-click="addReview()">Submit</button>
+        </fieldset>
+      </form>
+      </div>
+</div>
+<!-- End of user details div/partial -->

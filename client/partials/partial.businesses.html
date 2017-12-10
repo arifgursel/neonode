@@ -1,0 +1,15 @@
+<div class="row">
+	<div>
+		<h2>Commonwealth Businesses</h2>
+		<div ng-repeat="business in businesses">
+			<p>
+				<a ng-href="/#/businesses/{{business._id}}"><strong>{{business.name}}</strong></a><br>
+				<a ng-href="http://{{business.website}}">{{business.website}}</a><br>
+				<strong>Address: </strong> {{business.address}}<br>
+				<strong>Phone: </strong> {{business.phone}}<br>
+				<strong>Email: </strong> {{business.email}}<br>
+				<strong>Hours: </strong> {{business.hours}}<br>
+			</p>
+		</div>
+	</div>
+</div><!-- End of user details div/partial -->

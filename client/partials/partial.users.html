@@ -1,0 +1,23 @@
+<div id="users">
+	<h1>Currently Registered Users:</h1>
+	<span id="search">Search: <input type="text" ng-model="user_search"></span>
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>._id</th>
+			<th>Edit</th>
+		</tr>
+		<tr ng-repeat="user in users | filter: user_search | orderBy: 'created_at'">
+			<td><input type="text" ng-bind="user.first_name" value="{{user.first_name}}"></td>
+			<td><input type="text" ng-bind="user.last_name" value="{{user.last_name}}"></td>
+			<td><input type="text" ng-bind="user.alias" value="{{user.alias}}"></td>
+			<td><span ng-bind="user._id"></span></td>
+			<td>
+				<button ng-click="updateUser(user)" type="submit">Update</button>
+				<button ng-click="deleteUser(user)" type="submit">Delete</button>
+			</td>
+		</tr>
+	</table>
+</div><!-- End of users div/partial -->

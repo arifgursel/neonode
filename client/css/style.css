@@ -1,0 +1,248 @@
+/* Nav Bar*/
+/*.row {
+  max-width: 100%; }
+*/
+.menu {
+  background-color: #292c2f;
+  padding: 1.5rem 3rem;
+  height: auto; }
+  .menu .inline-list {
+    text-align: center; }
+    .menu .inline-list li {
+      float: none;
+      display: inline-block; }
+    .menu .inline-list a {
+      color: #fff;
+      padding-bottom: 0.5rem; }
+      .menu .inline-list a:hover {
+        color: #87d37c;
+        transition: all .3s ease-in-out; }
+    .menu .inline-list .active a {
+      color: #87d37c; }
+  .menu .account {
+    position: absolute;
+    top: 3%;
+    right: 3%; }
+    .menu .account a, .menu .account i {
+      color: #fff; }
+  @media only screen and (min-width: 40.063em) {
+    .menu {
+      height: 5rem; }
+      .menu .inline-list {
+        float: left;
+        margin: 0 0 0 1.5rem; }
+      .menu a:hover {
+        border-bottom: 2px solid #87d37c; } }
+  .menu .account-action {
+    float: right;
+    margin: -.75rem 0 0 0; }
+    .menu .account-action li {
+      margin-left: .2rem; }
+    .menu .account-action a {
+      padding: 0.75rem 1rem; }
+    .menu .account-action a.signup {
+      font-weight: bold;
+      background-color: #3d4146;
+      border-radius: 3px; }
+
+.name {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: #fff; }
+  .name i {
+    color: #87d37c;
+    margin-right: 0.5rem; }
+  @media only screen and (min-width: 40.063em) {
+    .name {
+      float: left; } }
+
+/*Social Media Buttons*/
+.split.button {
+  width: 100%; }
+  .split.button.facebook {
+    background: #3b5998;
+    text-transform: uppercase; }
+    .split.button.facebook span {
+      background: #2d4373;
+      float: right;
+    }
+      .split.button.facebook span:after {
+        border: none;
+        font-family: "foundation-icons";
+        content: "\f1c4";
+        font-size: 2rem;
+        line-height: 1rem;
+
+      }
+  .split.button.twitter {
+    background: #55acee;
+    text-transform: uppercase; }
+    .split.button.twitter span {
+      background: #2795e9;
+      float: right; }
+      .split.button.twitter span:after {
+        border: none;
+        font-family: "foundation-icons";
+        content: "\f1e4";
+        font-size: 2rem;
+        line-height: 1rem;
+        }
+  .split.button.google {
+    background: #d50f25;
+    text-transform: uppercase; }
+    .split.button.google span {
+      background: #a50c1d;
+      float: right;}
+      .split.button.google span:after {
+        border: none;
+        font-family: "foundation-icons";
+        content: "\f1ca";
+        font-size: 2rem;
+        line-height: 1rem;
+        }
+  .split.button.left-icon {
+    text-align: right; }
+    .split.button.left-icon span {
+      left: 0; }
+/* List   */
+.event {
+  padding: 1rem 1rem 1rem 0;
+  display: table; }
+
+.event-date {
+  width: 6rem;
+  margin: 0 auto 1rem;
+  display: table-cell;
+  width: auto; }
+  .event-date .event-month {
+    margin: 0;
+    background: #eee;
+    padding: 0.5rem 2rem;
+    text-align: center; }
+  .event-date .event-day {
+    margin: 0;
+    border: 1px solid #eee;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 2rem; }
+
+.event-desc {
+  padding: 0 0 0 1rem;
+  text-align: left;
+  display: table-cell;
+  vertical-align: top; }
+  .event-desc .event-desc-header {
+    margin: 0 0 0.5rem 0;
+    padding: 0; }
+  .event-desc .event-desc-detail {
+    margin: 0 0 0.25rem;
+    padding: 0; }
+  .event-desc .event-desc-time {
+    font-weight: bold; }
+  .event-desc .rsvp.button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0; }
+/* Newsletter Subscription*/
+.simple-subscription-form {
+  background: #0c3e5f;
+  color: #fefefe;
+  padding: 2rem;
+  border-radius: 0;
+}
+
+.simple-subscription-form .button {
+  margin-bottom: 0;
+  border-radius: 0 0 0 0;
+}
+
+/* Footer */
+
+  .marketing-site-footer {
+    background: #2c3840;
+    color: #8aa0ae;
+    padding: 2rem 0 0;
+  }
+
+  .marketing-site-footer .marketing-site-footer-menu-social a {
+    color: #fefefe;
+  }
+
+  .marketing-site-footer .column-block {
+    margin-bottom: 30px;
+  }
+
+  .marketing-site-footer > .row {
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 39.9375em) {
+    .marketing-site-footer .columns {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .marketing-site-footer-name {
+    color: #fefefe;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .marketing-site-footer-title {
+    color: #fefefe;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .marketing-site-footer-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .marketing-site-footer-block .fa {
+    font-size: 2rem;
+    color: #020304;
+  }
+
+  .marketing-site-footer-block p {
+    margin-left: 1rem;
+    line-height: 1.125rem;
+  }
+
+  .marketing-site-footer-bottom {
+    background: #020304;
+    padding: 1rem 0;
+  }
+
+  .marketing-site-footer-bottom p,
+  .marketing-site-footer-bottom .menu {
+    margin-bottom: 0;
+  }
+
+  .marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .marketing-site-footer-bottom .marketing-site-footer-bottom-links a {
+    color: #8aa0ae;
+  }
+
+  @media screen and (max-width: 63.9375em) {
+    .marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 63.9375em) {
+    .marketing-site-footer-bottom {
+      text-align: center;
+    }
+  }

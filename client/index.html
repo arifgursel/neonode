@@ -1,0 +1,185 @@
+<html ng-app='myApp'>
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' data: fonts.gstatic.com;"> -->
+    <base href="/">
+    <title>Project Name</title>
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/foundation.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Maps API -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRZ7gX3VqUaOfGq_jGsxiPwjlYDPf7pq8"></script> -->
+    <!-- <script type='text/javascript' src='./js/angular.min.js'></script>
+    <script type='text/javascript' src='./js/angular-route.min.js'></script> -->
+    <!-- <script type='text/javascript' src='./js/angularjs-geolocation.min.js'></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular-touch.min.js"></script>
+    <script type='text/javascript' src='./js/angular-foundation.js'></script>
+    <script type='text/javascript' src='./js/underscore-min.js'></script>
+    <script type='text/javascript' src='./js/app.js'></script>
+    <script type='text/javascript' src='./js/app-directives.js'></script>
+    <script type='text/javascript' src='./js/app-factories.js'></script>
+    <script type='text/javascript' src='./js/app-controllers.js'></script>
+</head>
+<body>
+<header class="nav" ng-controller="authController">
+    <nav class="menu">
+        <h1 class="name"><i class="fi-male-female"></i>Project Name</a></h1>
+        <ul class="inline-list">
+            <li ng-show="loggedIn" class="active"><a href="">Link 1</a></li>
+            <li ng-show="loggedIn" class="active"><a href="">Link 2</a></li>
+            <li ng-show="loggedIn" class="active"><a href="">Link 3</a></li>
+
+        </ul>
+        <ul class="inline-list hide-for-small-only account-action">
+            <li ng-hide="loggedIn">
+              <button class="button small" ng-click="openLogin()">Login</button>
+            </li>
+            <li ng-hide="loggedIn">
+              <button class="button small" ng-click="openSignup()">SignUp</button>
+            </li>
+            <li ng-show="loggedIn"><a href="#/profile">My Profile</a></li>
+            <li ng-show="admin"><a href="#/admin">Dashboard</a></li>
+            <li ng-show="loggedIn"><a ng-click="logout()">Logout</a></li>
+        </ul>
+
+    </nav>
+</header>
+<!-- Angular Div Body -->
+<div class="main" >
+    <div ng-view></div>
+</div>
+<footer class="marketing-site-footer">
+  <div class="row medium">
+    <div class="medium-4 columns">
+      <h4 class="marketing-site-footer-name">Project Name</h4>
+      <p>This site was built as boilerplate for future sites. With this codebase I will launch PACE and The Uniuon websites and build critical mass in 2018.</p>
+      <ul class="menu marketing-site-footer-menu-social simple">
+        <li><a href="#"><i class="fi-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fi-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fi-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fi-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="medium-4 columns">
+       <h4 class="marketing-site-footer-title">Contact Info</h4>
+      <div class="marketing-site-footer-block">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <p>2400 1st ave.<br>Seattle, WA 98134</p>
+      </div>
+      <div class="marketing-site-footer-block">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <p>1 (800) 555-5555</p>
+      </div>
+      <div class="marketing-site-footer-block">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <p>contact@getonpace.org</p>
+      </div>
+    </div>
+    <div class="medium-4 columns">
+      <h4 class="marketing-site-footer-title">Instagram</h4>
+      <div class="row small-up-3">
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+        <div class="column column-block">
+          <img src="https://placehold.it/75" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="marketing-site-footer-bottom">
+    <div class="row large-unstack align-middle">
+      <div class="column">
+        <p>&copy; 2017 No rights reserved</p>
+      </div>
+      <div class="column">
+        <ul class="menu marketing-site-footer-bottom-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Modal Content -->
+<script type="text/ng-template" id="signupContent.html" >
+  <div ng-controller="authController">
+    <button class="hollow tiny button" ng-click="swap(openLogin())">Already a member? Login Here</button>
+    <hr>
+    <a href="/api/auth/facebook" class="facebook radius button split"> sign up with facebook <span></span></a>
+    <a href="/api/auth/twitter" class="twitter radius button split"> sign up with twitter <span></span></a>
+    <a href="/api/auth/google" class="google radius button split"> sign up with google + <span></span></a>
+    <a href="/api/auth/linkedin" class="linkedin radius button split"> sign up with linkedin <span></span></a>
+    <a href="/api/auth/github" class="github radius button split"> sign up with github<span></span></a>
+    <div class="alert alert-danger" role="alert" ng-if="errors">
+      <p ng-repeat="error in errors">{{ error }}</p>
+    </div>
+    <p>Or enter your details below</p>
+    <label>First Name:</label>
+    <input class="form-control" type="text" name="firstName" ng-model="newUser.firstName" />
+    <br>
+    <label>Last Name:</label>
+    <input class="form-control" type="text" name="lastName" ng-model="newUser.lastName" />
+    <br>
+    <label>Email:</label>
+    <input class="form-control" type="text" name="email" ng-model="newUser.email" />
+    <br>
+    <label>Password:</label>
+    <input class="form-control" type="password" name="password1" ng-model="newUser.password1" />
+    <br>
+    <label>Confirm Password:</label>
+    <input class="form-control" type="password" name="password2" ng-model="newUser.password2" />
+    <br>
+    <button class="button" ng-click="createUser()" type="submit" class="button radius">Sign Up</button>
+    <button ng-click="cancel()" class="close-button" aria-label="Close reveal" type="button">
+  </div>
+</script>
+<script type="text/ng-template" id="loginContent.html">
+  <div ng-controller="authController">
+    <button class="hollow tiny button" ng-click="swap(openSignup())">Not a member? Signup Here</button>
+    <hr>
+    <a href="/api/auth/facebook" class="facebook radius button split"> sign in with facebook <span></span></a>
+    <a href="/api/auth/twitter" class="twitter radius button split"> sign in with twitter <span></span></a>
+    <a href="/api/auth/google" class="google radius button split"> sign in with google + <span></span></a>
+    <a href="/api/auth/linkedin" class="linkedin radius button split"> sign in with linkedin <span></span></a>
+    <a href="/api/auth/github" class="github radius button split"> sign in with github<span></span></a>
+    <div class="alert callout" ng-if="error.length > 0" data-closable>
+      <p>{{ error }}</p>
+    </div>
+    <hr>
+    <p>Or Enter Info Below</p>
+    <label>Email:</label><input class="form-control" name="email" type="text" ng-model="user.email" />
+    <label>Password:</label><input class="form-control" name="password" type="password" ng-model="user.password" />
+    <button class="button" type="submit" ng-click="login()">Sign In</button>
+    <button ng-click="cancel()" class="close-button" aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</script>
+
+<!-- Scripts | jQuery + Foundation 6 -->
+<script src='./js/jquery.js'></script>
+<script src='./js/foundation.js'></script>
+<script>
+        $(document).foundation();
+</script>
+<script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+</body>
+</html>

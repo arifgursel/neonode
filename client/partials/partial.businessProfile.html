@@ -1,0 +1,30 @@
+<div class="row" ng-app="myapp" ng-controller="businessProfileController" ng-init="findBusiness()">
+	<div>
+		<a ng-href="/businesses/{{business._id}}"><h2>{{business.name}}</h2</a><br>
+		<a ng-href="http://{{business.website}}">{{business.website}}</a><br>
+		<strong>Address: </strong> {{business.address}}<br>
+		<strong>Phone: </strong> {{business.phone}}<br>
+		<strong>Email: </strong> {{business.email}}<br>
+		<strong>Hours: </strong> {{business.hours}}<br>
+	</div>
+	<!-- Google Map -->
+	<div class="col-md-7">
+		<div id="map" style="width:645px; height:645px"></div>
+	</div>
+	<div>
+		<a ng-href="/home"><strong>Blacklist this business (does nothing...)</strong></a><br>
+		<h2>Categories</h2>
+		<div ng-repeat="category in business.categories">
+			{{category.name}}
+		</div>
+		<h2>Reviews</h2>
+		<a ng-href="/reviews/add/{{business._id}}"><strong>Write a review!</strong></a><br>
+		<div ng-repeat="review in business.reviews">
+			<p>
+				<strong>Rating: </strong> {{review.rating.value}}<br>
+				{{review.text}}<br>
+				by {{review.user.firstName}} {{review.user.lastName}}<br>
+			</p>
+		</div>
+	</div>
+</div><!-- End of user details div/partial -->
