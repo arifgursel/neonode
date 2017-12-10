@@ -1,6 +1,6 @@
 //Config Variables
 var devURL = "http://127.0.0.1";
-var prodURL = "http://commonwealth.herokuapp.com";
+var prodURL = "http://arifneonode.herokuapp.com";
 var devDB = 'mongodb://localhost/devDB';
 var prodDB = 'mongodb://commonwealthadmins:!4OurCommonGood@ds042688.mongolab.com:42688/commonwealthdb';
 var devPort = 8080;
@@ -82,8 +82,8 @@ module.exports = {
     secretKey: "v1b3h3@^y",
     adminAccount: admin,
     passportFacebook: {
-      clientID: '674730196002972',
-      clientSecret: 'f8ea934ce7881c84b855d9e4c228bd7f',
+      clientID: '1186832174749919',
+      clientSecret: 'bbb868d12fd9f771e2cff738507761c9',
       callbackURL: prodURL + "/api/auth/facebook/callback",
       profileFields: ['id', 'displayName', 'name', 'photos', 'email', 'friends']
     },
