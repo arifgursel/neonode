@@ -27,8 +27,8 @@ module.exports = {
     secretKey: "v1b3h3@^y",
     adminAccount: admin,
     passportFacebook: {
-      clientID: '104627854481',
-      clientSecret: 'de22de02648563ec3653830a1ab02727',
+      clientID: '1186832174749919',
+      clientSecret: 'bbb868d12fd9f771e2cff738507761c9',
       callbackURL: devURL+":"+devPort+"/api/auth/facebook/callback",
       profileFields: ['id', 'displayName', 'name', 'email', 'friends']
     },
@@ -82,8 +82,8 @@ module.exports = {
     secretKey: "v1b3h3@^y",
     adminAccount: admin,
     passportFacebook: {
-      clientID: '104627854481',
-      clientSecret: 'de22de02648563ec3653830a1ab02727',
+      clientID: '674730196002972',
+      clientSecret: 'f8ea934ce7881c84b855d9e4c228bd7f',
       callbackURL: prodURL + "/api/auth/facebook/callback",
       profileFields: ['id', 'displayName', 'name', 'photos', 'email', 'friends']
     },
