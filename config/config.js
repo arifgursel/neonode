@@ -94,7 +94,7 @@ module.exports = {
 	    callbackURL: prodURL + "/api/auth/twitter/callback"
     },
     passportGoogle: {
-      lientID: "623922084598-336obi0jav7s6l4s1nincem4gu4ufiaa.apps.googleusercontent.com",
+      clientID: "623922084598-336obi0jav7s6l4s1nincem4gu4ufiaa.apps.googleusercontent.com",
       clientSecret: "HjZQNpb_sWeNv-MiX8cKAaxA",
 	    callbackURL: prodURL + "/api/auth/google/callback"
     },
