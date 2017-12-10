@@ -15,14 +15,14 @@ var admin = {
 
 //Config Object To Export
 module.exports = {
-  corsAllowOrigin: process.env.CORS_ALLOW_ORIGIN || 'http://127.0.0.1',
+  corsAllowOrigin: process.env.CORS_ALLOW_ORIGIN || prodURL,
   apiPrefix: '/api',
   development: {
     db: devDB,
     port: devPort,
     url: devURL,
     app: {
-      name: 'commonwealth dev'
+      name: 'arifneonode dev'
     },
     secretKey: "v1b3h3@^y",
     adminAccount: admin,
@@ -63,13 +63,13 @@ module.exports = {
   test: {
     port: testPort,
     app: {
-      name: 'commonwealth test'
+      name: 'arifneonode test'
     }
   },
   stage: {
     port: process.env.PORT,
     app: {
-      name: 'commonwealth stage'
+      name: 'arifneonode stage'
     }
   },
   production: {
@@ -77,7 +77,7 @@ module.exports = {
     port: process.env.PORT || 8080,
     url: prodURL,
     app: {
-      name: 'commonwealth production'
+      name: 'arifneonode production'
     },
     secretKey: "v1b3h3@^y",
     adminAccount: admin,
