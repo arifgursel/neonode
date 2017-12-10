@@ -1,8 +1,8 @@
 //Config Variables
 var devURL = "http://127.0.0.1";
-var prodURL = "http://arifneonode.herokuapp.com";
+var prodURL = "https://arifneonode.herokuapp.com";
 var devDB = 'mongodb://localhost/devDB';
-var prodDB = 'mongodb://commonwealthadmins:!4OurCommonGood@ds042688.mongolab.com:42688/commonwealthdb';
+var prodDB = 'mongodb://arifgursel:EssahSaha1@ds151163.mlab.com:51163/heroku_xzm76jmp';
 var devPort = 8080;
 var testPort = 8080;
 var admin = {
