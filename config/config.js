@@ -30,6 +30,7 @@ module.exports = {
       clientID: '1186832174749919',
       clientSecret: 'bbb868d12fd9f771e2cff738507761c9',
       callbackURL: devURL+":"+devPort+"/api/auth/facebook/callback",
+      enableProof: true,
       profileFields: ['id', 'displayName', 'name', 'email', 'friends']
     },
     passportTwitter: {
@@ -85,6 +86,7 @@ module.exports = {
       clientID: '1186832174749919',
       clientSecret: 'bbb868d12fd9f771e2cff738507761c9',
       callbackURL: prodURL + "/api/auth/facebook/callback",
+      enableProof: true,
       profileFields: ['id', 'displayName', 'name', 'photos', 'email', 'friends']
     },
     passportTwitter: {
