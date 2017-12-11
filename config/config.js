@@ -50,11 +50,6 @@ module.exports = {
 	    profileFields: ['id', 'first-name', 'last-name', 'email-address'],
 	    callbackURL: devURL+":"+devPort+"/api/auth/linkedin/callback"
     },
-    passportSoundcloud: {
-      clientID: '081fe1dd030195124bfc0f29b3ecf550',
-	    clientSecret: '184c96b13ea997ac12675ed3e7f8ea3f',
-	    callbackURL: devURL+":"+devPort+"/api/auth/soundcloud/callback"
-    },
     passportGithub: {
       clientID: "2569c6c472fef0828620",
 	    clientSecret: "23f9f61bcb6e658d012dfb3679914a245e2eaaa1",
@@ -90,8 +85,8 @@ module.exports = {
       profileFields: ['id', 'displayName', 'name', 'photos', 'email', 'friends']
     },
     passportTwitter: {
-      consumerKey: 'UbfPxgQSUn80Ggg0qLluplQ4v',
-	    consumerSecret: 'PJgTZqP5nrTwiRzGATXnGWqTCdJ3ziAEPCCLWpDBsbWaekIOg9',
+      consumerKey: 'vFgpl2oroJwUMKZyuyPBic4zn',
+      consumerSecret: 'bthKdgLxPHOYdTYPbgmFScPSzlXTRCHsYnfNEneT5qrJlPB6qN',
 	    userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
 	    callbackURL: prodURL + "/api/auth/twitter/callback"
     },
@@ -104,17 +99,12 @@ module.exports = {
       consumerKey: '86b7lxz4f1athj',
 	    consumerSecret: 'fOLNuLnuj6iMmWW2',
 	    profileFields: ['id', 'first-name', 'last-name', 'email-address'],
-	    callbackURL: devURL + "/api/auth/linkedin/callback"
-    },
-    passportSoundcloud: {
-      clientID: '081fe1dd030195124bfc0f29b3ecf550',
-	    clientSecret: '184c96b13ea997ac12675ed3e7f8ea3f',
-	    callbackURL: devURL + "/api/auth/soundcloud/callback"
+      callbackURL: prodURL + "/api/auth/linkedin/callback"
     },
     passportGithub: {
       clientID: "2569c6c472fef0828620",
 	    clientSecret: "23f9f61bcb6e658d012dfb3679914a245e2eaaa1",
-	    callbackURL: devURL + "/api/auth/github/callback"
+      callbackURL: prodURL + "/api/auth/github/callback"
     }
   }
 };

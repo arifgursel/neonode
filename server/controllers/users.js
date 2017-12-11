@@ -307,7 +307,7 @@ module.exports = (function() {
 					    	console.log("*** Error in trying to find visa object ***");
 					    	return done(err);
 					    } if(visa){
-					    	Visa.findOneAndUpdate({_id: visa._id}, {connections: JSON.stringify(profile._json.friends)}, function(err,visa){
+							Visa.findOneAndUpdate({ _id: visa._id }, {accessToken: accessToken, connections: JSON.stringify(profile._json.friends)}, function(err,visa){
 					    		if(err){
 					    			return done(err);
 					    		} if(visa){
